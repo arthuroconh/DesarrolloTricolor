@@ -1,0 +1,38 @@
+body{
+	background: #ecf0f1;
+}
+header{
+	background: #2980b9;
+	width:100%;
+	float: left;
+	height: 60px;
+	position: fixed;
+	top: 0;	
+	z-index: 5000;
+}
+.contenedorformulario{
+	position: relative;
+	top:100px;	
+	margin-left: 30%;
+	width: 40%;
+	max-height: 500px;
+}
+#formularionuevoproducto{
+	position: absolute;
+	width: 100%;
+}
+#formularionuevoproducto input{
+	position: relative;
+	width: 60%;
+	margin-bottom: 10px;
+	float: left;
+}
+#formularionuevoproducto label{
+	position: relative;
+	width: 30%;
+	margin-right: 5%; 
+	float: left;
+}
+.salto{
+	width: 100%;
+}

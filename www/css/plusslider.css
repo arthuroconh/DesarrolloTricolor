@@ -1,0 +1,83 @@
+/**
+	plusslider Version 1.4.6
+	By Jamy Golden
+	http://css-plus.com
+**/
+
+/* plusslider Styling */
+.plusslider-container { position: relative; left: 0; width: 100%;}
+
+.plusslider {
+	-webkit-background-clip: padding;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	background-color:transparent;
+	height: 250px;
+	margin: 0 auto;
+	padding-bottom: 180px;
+	overflow: hidden;
+	top:0px;
+	position: relative;
+	width: 50%;
+}
+
+.plusslider .child { float: left; }
+
+/* Controls */
+.plusslider-pagination-wrapper {
+	background-color: transparent; /* fallback color */
+	height: 14px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 200px;
+	z-index: 1;
+}
+
+.plusslider-pagination {
+	display: table;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+.plusslider-pagination li {
+	background: #000;
+	opacity:0.4;
+	cursor: pointer;
+	float: left;
+	height: 6px;
+	margin: 0 5px;
+	text-indent: -9999px; /*IE6 fix */
+	width: 1px;
+	display: block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.plusslider-pagination .current, .plusslider-pagination li:hover, .plusslider-pagination li:active {
+	background: #fafafa;
+	opacity:0.8;
+	-webkit-transition-property:background-color; 
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-moz-transition-property: background-color;
+	transition-duration: 0.5s;
+	
+}
+
+.plusslider-arrows .prev {background-position: 0 -10px; left: 10px; }
+.plusslider-arrows .prev:hover {background-position: 0 -42px; left: 10px; }
+.plusslider-arrows .next {background-position: -33px -10px; right: 10px; }
+.plusslider-arrows .next:hover {background-position: -33px -42px; }
+
+/* PlusFader Specific */
+.plustype-fader .child { display: none; position: absolute; left: 0; top: 0; }
+.plustype-fader .current { z-index: 2; }
+.plustype-fader .plusslider-pagination { position: relative; z-index: 200; }
+
+/* no-javascript fallback */
+	.plusslider-container > * { display: none; }
+	.plusslider-container > *:first-child { display: block; }
+/* End no-javascript fallback */
+.plusslider-container .child { display: block; } /* Counter no-js fallback for cloned elements. Necessary for infiniteSlide. Without this the DOM doesn't know the position of the element */
